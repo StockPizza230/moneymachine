@@ -13,8 +13,8 @@ export default component$(() => {
           />
         </div>
         <div class="h-32 ">
-          <p class="text-xl m-2 h-8">Title</p>
-          <div class="overflow-scroll w-full h-20 p-2 bg-slate-800">
+          <p class="m-2 h-8 text-xl">Title</p>
+          <div class="h-20 w-full overflow-scroll bg-slate-800 p-2">
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
               corporis eum adipisci est delectus suscipit placeat ipsam illo?
@@ -22,8 +22,13 @@ export default component$(() => {
               iure expedita explicabo est doloremque?
             </p>
           </div>
-          <div class="w-full h-full bg-slate-900">
-
+          <div class="flex h-16 w-full flex-row items-center justify-end gap-2 bg-slate-900 px-2">
+            <button class="h-10 w-28 rounded-full bg-slate-800 text-white ">
+              Remove
+            </button>
+            <button class="h-10 w-28 rounded-full bg-slate-700 text-white ">
+              Add
+            </button>
           </div>
         </div>
       </div>
