@@ -22,12 +22,10 @@ export default component$(() => {
       <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
-        {!isDev && (
-          <link
+        <link
             rel="manifest"
             href={`${import.meta.env.BASE_URL}manifest.json`}
           />
-        )}
         <RouterHead />
       </head>
       <body lang="en">

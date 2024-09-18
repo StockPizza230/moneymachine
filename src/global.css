@@ -6,4 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
+p {
+    color:white;
+}

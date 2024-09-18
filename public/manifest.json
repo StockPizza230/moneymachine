@@ -1,9 +1,27 @@
 {
-  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "qwik-project-name",
-  "short_name": "Welcome to Qwik",
-  "start_url": ".",
+  "theme_color": "#123c73",
+  "background_color": "#772eff",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "/icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "/icon512_rounded.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "A Qwik project app."
+  "dir": "auto",
+  "lang": "en-US",
+  "name": "Money Machine",
+  "short_name": "moneymachine",
+  "start_url": "/",
+  "scope": "/",
+  "description": "SomeApp"
 }
