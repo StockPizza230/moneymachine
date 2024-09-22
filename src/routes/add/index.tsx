@@ -3,7 +3,7 @@ import { component$ } from "@builder.io/qwik";
 export default component$(() => {
   return (
     <div class="flex min-h-screen w-full overflow-y-auto">
-      <div class="m-2 h-72 w-full overflow-clip rounded-3xl border-t border-white/20 bg-slate-700 shadow-md">
+      <div class="m-2 h-72 w-full overflow-clip rounded-3xl bg-slate-700">
         <div class=" h-24 w-full overflow-clip">
           <img
             width={300}
