@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 
 interface NavProp {
   link?: string;
@@ -10,12 +10,14 @@ interface ItemProp {
   img?: string;
   name?: string;
   description?: string;
+  id?: number;
+  price?: number;
 }
 
 const NavButton = component$<NavProp>((props) => {
   return (
     <a
-      href={props.link}
+      href={props.link} 
       class="group flex aspect-square h-full w-full justify-center"
     >
       <div>
@@ -32,8 +34,12 @@ const NavButton = component$<NavProp>((props) => {
 });
 
 const ItemCard = component$<ItemProp>((props) => {
+
+  const eventHandling = (id: number, action:boolean) => {
+  }
+
   return (
-    <div class="m-2 h-72 w-full overflow-clip border rounded-3xl bg-slate-700">
+    <div class="m-2 h-72 w-full overflow-clip rounded-3xl bg-slate-700">
       <div class=" h-24 w-full overflow-clip">
         <img
           width={300}
@@ -51,7 +57,10 @@ const ItemCard = component$<ItemProp>((props) => {
           <button class="h-10 w-28 rounded-full bg-slate-800 text-white ">
             Remove
           </button>
-          <button class="h-10 w-28 rounded-full bg-slate-700 text-white ">
+          <button class="h-10 w-28 rounded-full bg-slate-700 text-white " onClick$={() => {
+            //send an event with ID
+            console.log(props.id);
+          }}>
             Add
           </button>
         </div>

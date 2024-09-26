@@ -23,7 +23,9 @@ export default component$(() => {
         border-t border-white/20 bg-slate-600">
         <NavButton link="/" icon="home" name="Home" />
         <NavButton link="/add" icon="add_circle" name="Add" />
+        <NavButton link="/items" icon="shopping_cart_checkout" name="Items" />
       </nav>
     </div>
   );
 });
+
