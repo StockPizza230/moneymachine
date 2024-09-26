@@ -22,7 +22,7 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
  */
 export default defineConfig(({ command, mode }): UserConfig => {
   return {
-    plugins: [qwikCity(), qwikVite({ devTools: { clickToSource: false } }), qwikPwa(),, tsconfigPaths()],
+    plugins: [qwikCity(), qwikVite({ devTools: { clickToSource: false } }), tsconfigPaths()],
     // This tells Vite which dependencies to pre-build in dev mode.
     optimizeDeps: {
       // Put problematic deps that break bundling here, mostly those with binaries.

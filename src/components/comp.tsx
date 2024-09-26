@@ -1,4 +1,4 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 
 interface NavProp {
   link?: string;
@@ -34,9 +34,6 @@ const NavButton = component$<NavProp>((props) => {
 });
 
 const ItemCard = component$<ItemProp>((props) => {
-
-  const eventHandling = (id: number, action:boolean) => {
-  }
 
   return (
     <div class="m-2 h-72 w-full overflow-clip rounded-3xl bg-slate-700">
