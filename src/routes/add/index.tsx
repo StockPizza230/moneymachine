@@ -40,6 +40,7 @@ export default component$(() => {
             key={index}
             description={item.description}
             price={item.price}
+            id={index}
           />
         ))}
       </ul>
