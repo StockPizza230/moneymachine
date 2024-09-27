@@ -34,12 +34,13 @@ export default component$(() => {
 
   return (
     <div class="flex min-h-screen min-w-full items-center justify-center overflow-y-auto">
-      <form class="flex flex-col gap-4" onSubmit$={handleSubmit}>
-        <input placeholder="Name" type="text" bind:value={name}/>
-        <input placeholder="price" type="number" bind:value={price}/>
-        <input placeholder="description" type="text" bind:value={desc}/>
-        <input placeholder="image" type="text" bind:value={img}/>
-        <button type="submit" class="w-full h-12 border text-white">Add</button>
+      <form class="flex flex-col gap-2" onSubmit$={handleSubmit}>
+        <input placeholder="Name" class="outline-none p-2 rounded-xl text-white bg-slate-950" type="text" bind:value={name}/>
+        <input placeholder="price" type="number" class="outline-none p-2 rounded-xl text-white bg-slate-950" bind:value={price}/>
+        <input placeholder="description" type="text" class="outline-none p-2 rounded-xl text-white bg-slate-950" bind:value={desc}/>
+        <input placeholder="image" type="text" class="outline-none p-2 rounded-xl text-white bg-slate-950" bind:value={img}/>
+        <button type="submit" class="w-full h-12 border-2 rounded-full bg-slate-800
+         active:bg-slate-950 text-white active:translate-y-2 duration-75 transition-all">Add</button>
       </form>
     </div>
   );

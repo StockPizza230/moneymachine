@@ -36,7 +36,7 @@ const NavButton = component$<NavProp>((props) => {
 const ItemCard = component$<ItemProp>((props) => {
 
   return (
-    <div class="m-2 h-72 w-full overflow-clip rounded-3xl bg-slate-700">
+    <div class="m-2 h-72 w-full overflow-clip rounded-3xl border-2 bg-slate-700">
       <div class=" h-24 w-full overflow-clip">
         <img
           width={300}
@@ -51,7 +51,7 @@ const ItemCard = component$<ItemProp>((props) => {
           <p>{props.description}</p>
         </div>
         <div class="flex h-16 w-full flex-row items-center justify-end gap-2 bg-slate-900 px-2">
-          <button class="h-10 w-28 rounded-full bg-slate-700 text-white " onClick$={() => {
+          <button class="h-10 w-28 rounded-full active:bg-slate-800 active:translate-y-2 duration-75 bg-slate-700 text-white " onClick$={() => {
             //send an event with ID
             const existingItems = JSON.parse(localStorage.getItem("HISTORY") || "[]");
             existingItems.push(props.id);
