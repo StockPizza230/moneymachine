@@ -30,24 +30,35 @@ export default component$(() => {
   });
 
   return (
-    <div class="flex min-h-screen overflow-y-auto overflow-x-clip">
-      <div class="m-4 h-72 w-full overflow-x-clip overflow-y-auto  rounded-2xl border-t border-white/50 bg-slate-600">
+    <div class="h-screen flex flex-col pb-24 m-4 gap-5 overflow-clip">
+      <div class="h-72 w-full p-2 overflow-y-auto overflow-x-clip  rounded-2xl border-t border-white/50 bg-slate-600">
         <p>All Item in your list</p>
         {itemData.length > 0 ? (
           itemData.map((item, index) => (
             <>
-            <div class="h-20 w-full items-center justify-between border-y px-4 flex">
-              <p key={index} class="">
-                {item.name}
-              </p>
-              <img width={64} height={64} class="rounded-full object-cover h-16 w-16" src={item.img} />
-            </div>
+              <div class="flex h-20 w-full items-center justify-between border-y px-4">
+                <div class="flex flex-col justify-center items-start">
+                  <p key={index} class="text-lg font-bold">
+                    {item.name}
+                  </p>
+                  <p class="bg-green-500 rounded-md px-2 py-1 w-20 text-center border-2 border-green-600">{item.price} THB</p>
+                </div>
+                <img
+                  width={64}
+                  height={64}
+                  class="h-16 w-16 rounded-full object-cover"
+                  src={item.img}
+                />
+              </div>
             </>
-
           ))
         ) : (
-          <p class="text-white">No items available</p>
+          <p class="text-white justify-center items-center flex h-full w-full">No items available :C</p>
         )}
+      </div>
+
+      <div class="h-4/6 p-4 flex w-full overflow-y-auto overflow-x-clip rounded-2xl border-t border-white/50 bg-slate-600">
+      <p> History </p>
       </div>
     </div>
   );

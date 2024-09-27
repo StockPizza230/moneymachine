@@ -1,4 +1,4 @@
-import { component$, useSignal, useStore, useVisibleTask$ } from "@builder.io/qwik";
+import { $, component$, useSignal } from "@builder.io/qwik";
 export default component$(() => {
 
 
@@ -6,18 +6,35 @@ export default component$(() => {
   const price = useSignal("")
   const desc = useSignal("")
   const img = useSignal("")
-  let dataArray = {
-      name: name,
-      price: price,
-      description: desc,
-      img: img,
-      amount: 0,
-  }
+  
 
+  const handleSubmit = $((e:Event) => {
+    e.preventDefault()
+    const itemData = {
+      name: name.value,
+      price: parseInt(price.value),
+      description: desc.value,
+      img: img.value,
+      amount: 0,
+    };
+    const existingItems = JSON.parse(localStorage.getItem("ITEMS") || "[]");
+    existingItems.push(itemData);
+    localStorage.setItem("ITEMS", JSON.stringify(existingItems));
+
+    console.log(JSON.stringify(itemData));
+
+    // Reset input fields
+    name.value = "";
+    price.value = "";
+    desc.value = "";
+    img.value = "";
+
+
+  });
 
   return (
     <div class="flex min-h-screen min-w-full items-center justify-center overflow-y-auto">
-      <form class="flex flex-col gap-4">
+      <form class="flex flex-col gap-4" onSubmit$={handleSubmit}>
         <input placeholder="Name" type="text" bind:value={name}/>
         <input placeholder="price" type="number" bind:value={price}/>
         <input placeholder="description" type="text" bind:value={desc}/>

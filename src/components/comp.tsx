@@ -57,6 +57,7 @@ const ItemCard = component$<ItemProp>((props) => {
           <button class="h-10 w-28 rounded-full bg-slate-700 text-white " onClick$={() => {
             //send an event with ID
             console.log(props.id);
+            
           }}>
             Add
           </button>
