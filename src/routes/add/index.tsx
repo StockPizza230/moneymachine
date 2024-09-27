@@ -7,29 +7,17 @@ export default component$(() => {
 
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
-    const base = [
-      {
-        name: "Water",
-        price: 5,
-        description: "น้ำดื่ม",
-        img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
-        amount: 0,
-      },
-    ];
 
     const localStored = localStorage.getItem("ITEMS");
 
-    if (localStored == null) {
-      localStorage.setItem("ITEMS", JSON.stringify(base));
-      listOfItems.splice(0, listOfItems.length, ...base); // Update store with base
-    } else {
+    if (localStored) {
       const items = JSON.parse(localStored);
       listOfItems.splice(0, listOfItems.length, ...items); // Update store with parsed items
     }
 
     console.log("Current items:", listOfItems);
 
-    const historyBase = [0]
+    const historyBase: number[] = []
 
     const historyStored = localStorage.getItem("HISTORY");
     if (historyStored == null) {

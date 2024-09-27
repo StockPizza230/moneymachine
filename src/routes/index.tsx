@@ -27,9 +27,9 @@ export default component$(() => {
     if (localhis) {
       const parsedHistory: number[] = JSON.parse(localhis);
       historyData.splice(0, historyData.length, ...parsedHistory);
+      historyData.reverse();
     }
   });
-
   return (
     <div class="h-screen flex flex-col pb-24 overflow-clip m-4 gap-5">
       <div class="h-72 w-full p-2 overflow-y-auto overflow-x-clip rounded-2xl border-t border-white/50 bg-slate-600">
