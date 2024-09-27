@@ -51,13 +51,12 @@ const ItemCard = component$<ItemProp>((props) => {
           <p>{props.description}</p>
         </div>
         <div class="flex h-16 w-full flex-row items-center justify-end gap-2 bg-slate-900 px-2">
-          <button class="h-10 w-28 rounded-full bg-slate-800 text-white ">
-            Remove
-          </button>
           <button class="h-10 w-28 rounded-full bg-slate-700 text-white " onClick$={() => {
             //send an event with ID
-            console.log(props.id);
-            
+            const existingItems = JSON.parse(localStorage.getItem("HISTORY") || "[]");
+            existingItems.push(props.id);
+            console.log(existingItems);
+            localStorage.setItem("HISTORY", JSON.stringify(existingItems));
           }}>
             Add
           </button>
