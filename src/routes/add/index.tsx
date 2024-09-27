@@ -15,6 +15,63 @@ export default component$(() => {
         img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
         amount: 0,
       },
+      {
+        name: "Water",
+        price: 5,
+        description: "น้ำดื่ม",
+        img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
+        amount: 0,
+      },
+
+      {
+        name: "Water",
+        price: 5,
+        description: "น้ำดื่ม",
+        img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
+        amount: 0,
+      },
+      {
+        name: "Water",
+        price: 5,
+        description: "น้ำดื่ม",
+        img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
+        amount: 0,
+      },
+      {
+        name: "Water",
+        price: 5,
+        description: "น้ำดื่ม",
+        img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
+        amount: 0,
+      },
+      {
+        name: "Water",
+        price: 5,
+        description: "น้ำดื่ม",
+        img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
+        amount: 0,
+      },
+      {
+        name: "Water",
+        price: 5,
+        description: "น้ำดื่ม",
+        img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
+        amount: 0,
+      },
+      {
+        name: "Water",
+        price: 5,
+        description: "น้ำดื่ม",
+        img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
+        amount: 0,
+      },
+      {
+        name: "Water",
+        price: 5,
+        description: "น้ำดื่ม",
+        img: "https://lux.co.th/wp-content/uploads/2018/11/image1.png",
+        amount: 0,
+      },
     ];
 
     const localStored = localStorage.getItem("ITEMS");
